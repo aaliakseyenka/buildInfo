@@ -1,0 +1,46 @@
+<div class="builds">
+	<div class="row header">
+		<div class="column align-left">Changelist / Build</div>
+		<div class="column">Owner</div>
+		<div class="column">Time Started</div>
+		<div class="column">State</div>
+		<div class="column">Metrics</div>
+		<div class="column">Build</div>
+		<div class="column">Unit Test</div>
+		<div class="column">Functional Test</div>
+	</div>
+	<% builds.forEach(function(build){ %>
+		<div class="row <%= utils.getBuildClass(build.get('state')) %>">
+			<div class="column align-left"><%= build.id %></div>
+			<div class="column"><%= build.get('owner') %></div>
+			<div class="column"><%= utils.formatDateTime(build.get('date_st')) %></div>
+			<div class="column"><%= build.get('state') %></div>
+			<div class="column">
+				<div class="progress-box <%= utils.getBuildStepClass(build.get('metrics').state) %>"><% if(build.get('metrics').state == contracts.stepStates.RUNNING){ %>
+						<div class="progress"  style="width: <%=build.get('metrics').result.progress %>%;"></div>
+					<% } %>
+				</div>
+			</div>
+			<div class="column">
+				<div class="progress-box <%= utils.getBuildStepClass(build.get('build').state) %>">
+					<% if(build.get('build').state == contracts.stepStates.RUNNING) { %> 
+						 <div  class="progress"  style="width: <%=build.get('build').result.progress %>%;"></div>
+					 <% } %>
+				</div>
+			</div>
+			<div class="column">
+				<div class="progress-box <%= utils.getBuildStepClass(build.get('unitTests').state) %>">
+					<% if(build.get('unitTests').state == contracts.stepStates.RUNNING) { %> 
+						<div class="progress" style="width: <%=build.get('unitTests').result.progress%>%;"></div>%>
+					<% } %>
+				</div>
+			</div>
+			<div class="column">
+				<div class="progress-box <%= utils.getBuildStepClass(build.get('funcTest').state) %>"><% if(build.get('funcTest').state == contracts.stepStates.RUNNING) { %>
+					 	<div class="progress"  style="width: <%=build.get('funcTests').result.progress %>%;"></div>%>
+					<% }%>
+				</div>
+			</div>
+		</div>
+	<% }); %>
+</div>

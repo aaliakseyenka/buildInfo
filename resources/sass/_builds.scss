@@ -1,0 +1,62 @@
+.builds{
+	max-width: 90%;
+	margin: 0 auto;
+	padding: 5px;
+	background: #F5F8FC;
+	.row{
+		border: 1px solid #C8C9C9;
+		background-color: #F6F8FB;
+		color: #919293;
+		margin: 5px;
+		padding: 5px;
+		&.running{
+			border: 1px solid #A2C0DB;
+			background-color: #F1F5FA;
+			color: #253C67;
+		}
+		&.accepted, &.completed{
+			border: 1px solid #78A659;
+			background-color: #F3F8F2;
+			color: #3C5A29;
+		}
+		&.rejected, &.failed{
+			border: 1px solid #CE3F40;
+			background-color: #FDF0F0;
+			color: #C92727;
+		}
+		&.header{
+			color: #000;
+			border: none;
+			background: transparent;
+		}
+	}
+	.column{
+		display: inline-block;
+		text-align: center;
+		vertical-align: middle;
+		margin: 0 10px;
+		width: 10%;
+		&.align-left{
+			text-align: left;
+		}
+		.progress-box{
+			border: 1px solid #D8D8D8;
+			background-color: #CBD6D8;
+			width: 40px;
+			height: 25px;
+			margin: 0 auto;
+			&.running{
+				.progress{ 
+					background-color: #5B9BD5;
+					height: inherit;
+				}
+			}
+			&.complete{
+				background-color: #538135;
+			}
+			&.failed{
+				background-color: #C00000;
+			}
+		}
+	}
+}

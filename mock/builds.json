@@ -1,0 +1,101 @@
+[
+    {
+        "buildId": 1,
+        "type": 1,
+        "owner": "jtuck",
+        "date_st": 1414408985676,
+        "state": 4,
+        "metrics": {
+            "state": 1,
+            "result": {
+                "progress": 50,
+                "test": 64,
+                "maintability": 53,
+                "Security": 64,
+                "workmanship": 72
+            }
+        },
+        "build": {
+            "state": 1,
+            "result": {
+                "progress": 50,
+                "time": 1414408985676
+            }
+        },
+        "unitTests": {
+            "state": 2,
+            "result": {
+                "coverage" : 53,
+                "passed": 73    
+            }
+        },
+        "funcTest": {
+            "state": 2,
+            "result": {
+                "coverage" : 53,
+                "passed": 73    
+            }
+        }
+    },
+    {
+        "buildId": 2,
+        "type": 1,
+        "owner": "Art",
+        "date_st": 1414408985676,
+        "state": 3,
+        "metrics": {
+            "state": 2,
+            "result": {
+                "test": 64,
+                "maintability": 53,
+                "Security": 64,
+                "workmanship": 72
+            }
+        },
+        "build": {
+            "state": 3,
+            "result": {
+            }
+        },
+        "unitTests": {
+            "state": 0
+        },
+        "funcTest": {
+            "state": 0
+        }
+    },
+    {
+        "buildId": 3,
+        "type": 2,
+        "owner": "Mike",
+        "date_st": 1414408985676,
+        "state": 2,
+        "metrics": {
+            "state": 2,
+            "result": {
+                "test": 64,
+                "maintability": 53,
+                "Security": 64,
+                "workmanship": 72
+            }
+        },
+        "build": {
+            "state": 2,
+            "result": 1414408985676
+        },
+        "unitTests": {
+            "state": 2,
+            "result": {
+                "coverage" : 53,
+                "passed": 73    
+            }
+        },
+        "funcTest": {
+            "state": 2,
+            "result": {
+                "coverage" : 53,
+                "passed": 73    
+            }
+        }
+    }
+]
